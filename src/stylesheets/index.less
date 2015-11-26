@@ -1,0 +1,30 @@
+//
+// TWITTER BOOTSTRAP PLUGIN: Dropmenu
+// This module extends dropdown module with rich structure, menu positioning and more
+
+// @name: Dropmenu
+// @description: This module extends dropdown module with rich structure, menu positioning and more
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// -------------------------------
+
+@libPath: '../../vendor';
+
+// Core variables and mixins
+@import "@{libPath}/bootstrap/less/variables.less";
+@import "@{libPath}/bootstrap/less/mixins.less";
+
+// MODULE DEFINITION
+// -------------------
+@import 'modules/dropmenu-variables';
+@import 'modules/dropmenu-structure';
+@import 'modules/dropmenu-structure-table'; // plugin
+@import 'modules/dropmenu-positioning';
+@import 'modules/dropmenu-item';
+@import 'modules/dropmenu-inverse';
+@import 'modules/dropdown-submenu';
+@import 'modules/dropmenu-selectable';
+
+
+@import 'modules/table-dropmenu';

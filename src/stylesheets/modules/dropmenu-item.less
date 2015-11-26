@@ -1,0 +1,50 @@
+//
+// MODULE: Dropmenu item shortcut
+// Add keyboard shortcuts for your context menus
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// ----------------------------------------
+
+
+.dropmenu-item-label {
+	white-space: nowrap;
+}
+
+.dropmenu-item-content {
+	position: absolute;
+	text-align: right;
+	max-width: @dropdown-item-content-max-width;
+	right: @dropdown-padding-horizontal;
+	top: @dropdown-padding-vertical;
+	color: @dropdown-item-content-color;
+	
+	overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+	
+	small& {
+		line-height: @line-height-computed;
+	}
+}
+
+.dropdown-menu > li > a.dropmenu-item {
+	position: relative;
+	padding-right: 1.1 * @dropdown-item-content-max-width;
+}
+
+// Dependencies
+
+.dropdown-submenu .dropmenu-item-content {
+	right: @dropdown-padding-horizontal * 2;
+}
+
+
+.dropdown-menu > li.dropdown-submenu > a.dropmenu-item {
+	padding-right: 1.1 * @dropdown-item-content-max-width + @dropdown-padding-horizontal;
+}

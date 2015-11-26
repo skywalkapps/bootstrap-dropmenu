@@ -1,0 +1,182 @@
+//
+// MODULE: Dropdown submenu
+// This module extends Twitter Bootstrap dropdowns with second level submenus
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// ----------------------------------------
+
+.dropdown-submenu() when not(@dropdown-menu-hoverable) {
+	.dropdown-menu {
+		// position: static;
+	 //    margin: 0;
+	 //    list-style: none;
+	 //    border-radius: 0;
+	 //    .box-shadow(none);
+	 //    border: 0;
+	}
+}
+
+.dropdown-submenu() when (@dropdown-menu-hoverable) {
+	position: relative;
+	
+	&:hover .dropdown-menu {
+		display: block;
+	}
+
+	.dropdown-menu {
+		display: none;
+		position: absolute;
+		top: -3px;
+		left: 100%;
+		border-radius: 0 @border-radius-base @border-radius-base; 	
+	}
+}
+
+.dropdown-submenu > a {
+	&:after {
+		top: 50%;
+		right: @dropdown-padding-horizontal;
+		margin: -4px 0 0 0;
+		position: absolute;
+		display: inline-block;
+		font-family: 'Glyphicons Halflings';
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\e080";
+		font-size: .8 * @font-size-small;
+		color: @gray-light;
+	}
+
+	> .dropdown-menu > li > a {
+		padding-left: 2 * @dropdown-padding-horizontal!important;
+	}
+}
+
+// Level 2 dropdown menu
+// TODO: Apply only for tree
+// .dropdown-submenu {
+// 	.dropdown-submenu;
+
+// 	> .dropdown-menu {
+// 		> li > a {
+// 			padding-left: 1.5 * @dropdown-padding-horizontal;
+// 		}
+// 	}
+// }
+
+// DROPDOWN: SLIDEMORPH
+// Animated transition between submenus 
+// ------------------------
+.dropdown-container-slidemorph {
+    overflow: hidden;
+    min-width: auto; // we need exact sizes, not limited by min/max width
+    max-width: none;
+    .transition(~"all .3s ease-in-out");
+
+    .dropdown-menu {
+    	min-width: auto;
+    	padding: 3px 0;
+    }
+    // .js & > .dropdown-menu {
+    & .dropdown-submenu > .dropdown-menu {
+    	// display: block;
+		// .transition(~"visibility 0s .5s");
+	}
+	
+	.dropdown-submenu {
+		position: static;
+	}
+
+
+	.dropdown-submenu > .dropdown-menu {
+		.transition-transform(~".3s ease-in-out");
+	}
+
+	// &:hover .dropdown-menu {
+	// 	display: block;
+	// }
+
+	// First level submenu
+	> .dropdown-menu > .dropdown-submenu > ul {
+		position: absolute;
+		top: -3px;
+		right: 0;
+		left: auto;
+		border-radius: 0 @border-radius-base @border-radius-base; 
+		.translate(100%, 0);
+	}
+	
+	.dropdown-submenu.open > ul {
+		.translate(0, 0);
+		visibility: visible;
+		// .transition(~"visibility 0s .5s");
+	}
+}
+
+
+.dropdown-backlink {
+	border-bottom: 1px solid @dropdown-divider-bg;
+	
+	> a {
+	  position: relative;
+	  white-space: nowrap!important; // override deafult bootstrap link style
+
+
+	  &:before {
+	  	position: absolute;
+	  	left: 0;
+	  	top: 50%;
+	  	margin: -4px 4px 0 0;
+		position: relative;
+		display: inline-block;
+		font-family: 'Glyphicons Halflings';
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+  		content: "\e079"!important;
+		font-size: .8 * @font-size-small;
+		color: @gray-light!important;
+		width: @dropdown-menu-icon-width;
+	  }
+	}
+}
+
+// .dropdown-submenu>a:after {
+//     display:block;
+//     content:" ";
+//     float:right;
+//     width:0;
+//     height:0;
+//     border-color:transparent;
+//     border-style:solid;
+//     border-width:5px 0 5px 5px;
+//     border-left-color:#cccccc;
+//     margin-top:5px;
+//     margin-right:-10px;
+// }
+// .dropdown-submenu:hover>a:after {
+//     border-left-color:#ffffff;
+// }
+
+// .dropdown-submenu.pull-left>.dropdown-menu {
+//     left:-100%;
+//     margin-left:10px;
+//     -webkit-border-radius:6px 0 6px 6px;
+//     -moz-border-radius:6px 0 6px 6px;
+//     border-radius:6px 0 6px 6px;
+// }
+
+
+// Reset some style from parent .dropdown-menu
+// .dropdown-menu .dropdown-menu {
+	
+// }

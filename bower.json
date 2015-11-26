@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap-dropmenu",
+  "description": "Extension for Twitter Bootstrap dropdown menu.",
+  "version": "0.1.0",
+  "keywords": [
+    "dropdown",
+    "menu",
+    "bootstrap",
+    "front-end"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.0",
+    "bootstrap": "~3.3.0"
+  },
+  "devDependencies": {
+    "prism": "git@github.com:LeaVerou/prism.git#gh-pages",
+    "bootstrap-quick-search": "https://github.com/skywalkplugins/bootstrap-quick-search.git"
+  }
+}

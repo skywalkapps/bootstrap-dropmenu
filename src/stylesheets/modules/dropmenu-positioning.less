@@ -1,0 +1,38 @@
+//
+// MODULE: Dropmenu positioning
+// Utility classes for dropmenu positioning. Basic dropdown can be only left or right.
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// -----------------------------
+
+// Dropdown menu is by default positioned to bottom right (no need for .dropdown-menu-bottomright)
+// Also Twitter Bootstrap has class .dropdown-menu-left to change bottom position, so we don't need .dropdown-menu-bottomleft either 
+
+// Parent needs to be display: inline-block, so it can be properly positioned
+.dropdown-position-topright {
+  top: auto;
+  right: 0;	
+  bottom: 100%;
+  left: auto;
+  margin-bottom: 2px;
+}
+
+.dropdown-position-topleft {
+  top: auto;
+  right: auto;	
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 2px;
+}
+
+.dropdown-position-bottomright {
+  right: 0;
+  left: auto;
+}
+
+// Implicit position
+// .dropdown-position-bottomleft {}

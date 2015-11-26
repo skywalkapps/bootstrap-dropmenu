@@ -1,0 +1,31 @@
+//
+// PLUGIN: Dropmenu container inverse
+// This module extends module dropmenu-structure to display inversed variant of the container
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @example:
+    
+// ----------------------------------------
+
+// Dropdown using container
+.dropdown-inverse .dropdown-container {
+  background-color: @dropdown-inverse-fallback-bg;
+  background-color: @dropdown-inverse-bg;
+  border: 1px solid @dropdown-inverse-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-inverse-border;
+  color: @dropdown-inverse-text-color;
+  
+  .dropdown-menu {
+    border: 0;
+  }
+  .dropdown-menu,
+  .dropdown-footer {
+    background-color: transparent;
+  }
+
+  .dropdown-footer {
+    border-color: @dropdown-inverse-divider-bg;
+  }
+
+}

@@ -1,0 +1,18 @@
+//
+// PLUGIN: Dropmenu structure
+// This module extends module dropmenu-structure to display multiple menus like a table
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown-container
+// @example:
+    
+// ----------------------------------------
+
+@media (min-width: @screen-md) {
+  .open > .dropdown-container > .dropdown-table {
+    display: table;
+  }
+  .open > .dropdown-container > .dropdown-table > .dropdown-menu {
+    display: table-cell;
+  }
+}

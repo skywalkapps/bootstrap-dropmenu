@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+kramdown:
+  auto_ids: true
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:          ./src/docs
+destination:     ./docs
+keep_files:		 ['assets', 'libs', 'javascripts', 'stylesheets']
+host:             localhost
+port:             8888
+baseurl:		  ""
+encoding:         UTF-8
+
+# Custom vars
+current_version:  0.1.2
+repo:             https://github.com/skywalkapps/bootstrap-dropmenu.git
+
+vendor:			  ./vendor
+download:
+  source:         https://github.com/skywalkapps/bootstrap-dropmenu/archive/master.zip

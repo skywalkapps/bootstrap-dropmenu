@@ -1,0 +1,181 @@
+//
+// MODULE: Dropmenu structure
+// This module extends Twitter Bootstrap dropdowns with richer structure
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// ----------------------------------------
+
+.dropdown-overflow() {}
+.dropdown-overflow() when (isnumber(@dropdown-menu-max-height)) {
+  max-height: @dropdown-menu-max-height;
+  overflow-y: auto;
+}
+  
+
+// Dropdown container - wrapper for dropdown menu
+// -----------------------------------
+
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: @dropdown-menu-min-width;
+  max-width: @dropdown-menu-max-width;
+  margin: 2px 0 0; // override default ul
+  list-style: none;
+  font-size: @font-size-base;
+  background-color: @dropdown-bg;
+  border: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-border;
+  border-radius: @border-radius-base;
+  .box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+  background-clip: padding-box;
+}
+
+// Dropdown menu - reset default styles
+// ---------------------------
+.dropdown-container .dropdown-menu {
+  position: static;
+  z-index: 1000;
+  float: none!important;
+  padding: @line-height-computed / 2 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  .box-shadow(none);
+  
+  .dropdown-overflow;
+  
+  // Hide gap between menus
+  + .dropdown-menu {
+    padding-top: 0;
+  }
+
+}
+
+.dropdown-toolbar + .dropdown-menu {
+  // padding-top: 0;
+}
+
+// Mixin: Truncate
+.dropmenu-truncate() when (isnumber(@dropdown-menu-max-width)) and not(@dropdown-menu-truncate) {
+  // white-space: normal;
+}
+.dropmenu-truncate() when (@dropdown-menu-truncate){
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-decoration: none;
+  
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+       
+  .transition(none);
+}
+
+// Truncate menu items
+.dropdown-menu > li > a {
+  .dropmenu-truncate; // Text truncation within the menu if @dropdown-menu-truncate is true
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-toggle {
+  cursor: pointer; // for non button dropdown
+}
+
+.dropdown-header {
+  white-space: nowrap;
+  // .f-univers-bold;
+}
+
+
+
+// Opened dropdown
+// -----------------------------
+.open > .dropdown-container > .dropdown-menu,
+.open > .dropdown-container {
+  display: block;
+}
+
+// Dropdown toolbar
+// -----------------------
+.dropdown-toolbar {
+  padding-top: @dropdown-padding-vertical + 1; 
+  padding-left: @dropdown-padding-horizontal;
+  padding-right: @dropdown-padding-horizontal; 
+  padding-bottom: @dropdown-padding-vertical; 
+  
+  border-bottom: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border-bottom: 1px solid @dropdown-border;
+  border-radius: @border-radius-base @border-radius-base 0 0;
+  
+  > .form-group {
+    margin: @dropdown-padding-vertical -10px;
+  }
+}
+
+// Dropdown footer
+// -----------------------------
+.dropdown-footer {
+  padding: @dropdown-footer-padding;
+  border-top: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border-top: 1px solid @dropdown-border;
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+}
+
+
+// Anchor block - emphasized links
+// ------------------------------
+
+.anchor-block small {
+  display: none;
+}
+
+@media (min-width: @screen-md) {
+  .anchor-block {
+    // .f-univers;
+  }
+
+  .anchor-block small {
+    display: block;
+    font-weight: normal;
+    color: @gray-light;
+    // .f-univers-light;
+  }
+
+  .dropdown-menu > li > a.anchor-block {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+
+
+// Extension: Hoverable
+// Hoverable adds new functionality to the dropdown menu
+// ------------------------------------
+
+@media (min-width: @screen-md) {
+  .dropdown.hoverable:hover {
+    > ul {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+//
+// PLUGIN: Dropdown inverse
+// This module extends Twitter Bootstrap dropdowns with inversed variant
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// ----------------------------------------
+
+
+// Dropdown inverse variant
+// -----------------------------------
+
+// The dropdown menu (ul)
+.dropdown-inverse .dropdown-menu {
+  background-color: @dropdown-inverse-fallback-bg;
+  background-color: @dropdown-inverse-bg;
+  border: 1px solid @dropdown-inverse-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-inverse-border;
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+    .nav-divider(@dropdown-inverse-divider-bg);
+  }
+
+  // Links within the dropdown menu
+  > li > a {
+    color: @dropdown-inverse-link-color;
+  }
+}
+
+// Hover/Focus state
+.dropdown-inverse .dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    color: @dropdown-inverse-link-hover-color;
+    background-color: @dropdown-inverse-link-hover-bg;
+  }
+}
+
+// Active state
+.dropdown-inverse .dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @dropdown-inverse-link-active-color;
+    background-color: @dropdown-inverse-link-active-bg;
+  }
+}
+
+// Disabled state
+//
+// Gray out text and ensure the hover/focus state remains gray
+
+.dropdown-inverse .dropdown-menu > .disabled > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @dropdown-inverse-link-disabled-color;
+  }
+}
+
+// Dropdown section headers
+.dropdown-inverse .dropdown-header {
+  color: @dropdown-inverse-header-color;
+}

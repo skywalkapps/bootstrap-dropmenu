@@ -1,0 +1,42 @@
+// Master file
+// -------------------
+@libPath: '../../vendor';
+
+// BOOTSTRAP
+// ===================
+
+// BOOTSTRAP: CORE
+// -------------------
+
+// Core variables and mixins
+@import "@{libPath}/bootstrap/less/bootstrap.less";
+
+// Custom styles
+// ===================
+
+// CORE
+// -------------------
+
+@import 'util/variables';
+@import 'util/mixins';
+
+@import 'core/docs';
+@import 'core/docs-type';
+@import 'core/docs-syntax';
+// @import 'core/docs-layout';
+
+@import "@{libPath}/bootstrap-quick-search/src/stylesheets/modules/form-feedback-action/index";
+
+// MODULE DEFINITION
+// -------------------
+@import 'modules/dropmenu-variables';
+@import 'modules/dropmenu-inverse';
+@import 'modules/dropmenu-structure';
+@import 'modules/dropmenu-structure-table';
+@import 'modules/dropmenu-structure-inverse';
+@import 'modules/dropmenu-positioning';
+@import 'modules/dropmenu-item';
+@import 'modules/dropdown-submenu';
+@import 'modules/dropmenu-selectable';
+
+@import 'modules/table-dropmenu';

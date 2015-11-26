@@ -1,0 +1,36 @@
+//
+// MODULE: Dropmenu selectable
+// This module extends Twitter Bootstrap dropdowns with selectable items
+
+// @author: Martin Staněk (https://github.com/icoach)
+// @extends: .dropdown
+// @bootstrap: 3.2
+// @example:
+    
+// ----------------------------------------
+
+.dropdown-menu--selectable > li > a {
+	&:before {
+		position: absolute;
+		left: 0;
+	  	top: 50%;
+	  	margin: -4px 4px 0 0;
+		position: relative;
+		display: inline-block;
+		font-family: 'Glyphicons Halflings';
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "";
+		font-size: .8 * @font-size-small;
+		color: @text-color;
+		width: @dropdown-menu-icon-width;
+	}
+}
+
+
+.dropdown-menu--selectable > .selected > a:before {
+	content: "\e013";
+}
