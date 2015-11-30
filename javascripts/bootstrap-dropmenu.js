@@ -4,15 +4,16 @@
 
 // Required libraries
 // f.e. require('../../vendor/jquery/jquery.min');
+// require('../../vendor/zeroclipboard/dist/ZeroClipboard.min');
 
 // Main scripts
-// f.e. require('main');
+
 
 $(function(){
 
 	$('.sw-example .dropdown-container > .dropdown-menu').each(function(){
 		$(this).css({
-			'width': $(this).width()
+			// 'width': $(this).width()
 		})
 	})
 

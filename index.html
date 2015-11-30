@@ -87,7 +87,7 @@
           <div class="row">
             <div class="col-md-8">
               <h1 class="page-header">Dropmenu for Bootstrap</h1>
-              <p class="sw-text lead">Dropdown module is your fellow companion when creating a web application. Dropmenu gives Twitter Bootstrap dropdown more capabilities and rich structure.</p>
+              <p class="sw-text lead">Dropmenu is a set of extensions, which enhances Bootstrap dropdown component, your fellow companion when creating a web application. These plugins add more structure and capabilities to the dropdown.</p>
             </div>
           </div>
 
@@ -98,16 +98,14 @@
       <div class="container">
         <p><a name="code"></a></p>
 
-<h2>Give your dropdown menu richer structure</h2>
+<h3>Dropmenu Structure</h3>
 
-<h3><span class="text-muted">Component: </span>Dropdown Structure</h3>
-
-<p>Sometimes just simple unordered list is not enough for a dropdown menu. If you want to give it more structure, use this extension. Dropmenu adds elements like toolbar (<code>.dropdown-toolbar</code>) and footer (<code>.dropdown-header</code>). You can even use more <code>.dropdown-menu</code> elements. Basically, all you&#39;ve even needed. </p>
+<p>Basic Bootstrap dropdown allow you tu use only one <code>.dropdown-menu</code> class applied to an unordered list. Dropmenu adds <code>.dropdown-container</code>, which serves as a wrapper for more elements. You can use toolbar (<code>.dropdown-toolbar</code>),footer (<code>.dropdown-footer</code>) and even more <code>ul.dropdown-menu</code> elements. Basically, all you&#39;ve ever needed. </p>
 
 <div class="sw-example" id="dropdown-structure">
   <div class="btn-group dropdown sw-open" style="margin-right:20px">
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Account
+      <i class="glyphicon glyphicon-user"></i>
       <span class="caret"></span>
     </button>
 
@@ -125,6 +123,402 @@
         <li><a href="#">Your stars</a></li>
         <li><a href="#">Explore</a></li>
         <li><a href="#">Integrations</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+
+      <div class="dropdown-footer">
+        <a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a>
+      </div><!-- /dropdown-footer -->
+
+    </div><!-- /dropdown-container -->
+  </div><!-- /dropdown -->
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-user&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-toolbar&quot;</span><span class="nt">&gt;</span>
+      Signed in as<span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>Martin Staněk<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-toolbar --&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Your profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Your stars<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Explore<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Integrations<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Help<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Log out<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-footer&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-cog&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Settings
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-footer --&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-container --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
+</code></pre></div>
+<h3>Scrolling</h3>
+
+<p>Customize height of the menu by setting <code>@dropmenu-max-height</code> variable. If maximum height is set, dropdown menu becomes scrollable. Change the variable to fit your application.</p>
+
+<div class="sw-example" id="">
+  <div class="btn-group dropdown sw-open" style="margin-right:20px">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Scrollable menu
+      <span class="caret"></span>
+    </button>
+
+    <div class="dropdown-container">
+
+      <div class="dropdown-toolbar">
+        <strong>List of states (47)</strong>
+      </div><!-- /dropdown-toolbar -->
+
+      <div class="dropdown-divider"></div>
+
+      <ul class="dropdown-menu">
+        <li><a href="#">Alabama </a></li>
+        <li><a href="#">Alaska </a></li>
+        <li><a href="#">Arizona </a></li>
+        <li><a href="#">Arkansas </a></li>
+        <li><a href="#">California </a></li>
+        <li><a href="#">Colorado </a></li>
+        <li><a href="#">Connecticut </a></li>
+        <li><a href="#">Delaware </a></li>
+        <li><a href="#">Florida </a></li>
+        <li><a href="#">Georgia </a></li>
+        <li><a href="#">Hawaii </a></li>
+        <li><a href="#">Idaho </a></li>
+        <li><a href="#">Illinois Indiana </a></li>
+        <li><a href="#">Iowa </a></li>
+        <li><a href="#">Kansas </a></li>
+        <li><a href="#">Kentucky </a></li>
+        <li><a href="#">Louisiana </a></li>
+        <li><a href="#">Maine </a></li>
+        <li><a href="#">Maryland </a></li>
+        <li><a href="#">Massachusetts </a></li>
+        <li><a href="#">Michigan </a></li>
+        <li><a href="#">Minnesota </a></li>
+        <li><a href="#">Mississippi </a></li>
+        <li><a href="#">Missouri </a></li>
+        <li><a href="#">Montana Nebraska </a></li>
+        <li><a href="#">Nevada </a></li>
+        <li><a href="#">New Hampshire </a></li>
+        <li><a href="#">New Jersey </a></li>
+        <li><a href="#">New Mexico </a></li>
+        <li><a href="#">New York </a></li>
+        <li><a href="#">North Carolina </a></li>
+        <li><a href="#">North Dakota </a></li>
+        <li><a href="#">Ohio </a></li>
+        <li><a href="#">Oklahoma </a></li>
+        <li><a href="#">Oregon </a></li>
+        <li><a href="#">Pennsylvania Rhode Island </a></li>
+        <li><a href="#">South Carolina </a></li>
+        <li><a href="#">South Dakota </a></li>
+        <li><a href="#">Tennessee </a></li>
+        <li><a href="#">Texas </a></li>
+        <li><a href="#">Utah </a></li>
+        <li><a href="#">Vermont </a></li>
+        <li><a href="#">Virginia </a></li>
+        <li><a href="#">Washington </a></li>
+        <li><a href="#">West Virginia </a></li>
+        <li><a href="#">Wisconsin </a></li>
+        <li><a href="#">Wyoming</a></li>
+      </ul>
+
+    </div><!-- /dropdown-container -->
+  </div><!-- /dropdown -->
+
+</div>
+
+<h3>Truncated Items</h3>
+
+<p>Not only height, but also width of the menu can be limited. Set <code>@dropmenu-max-width</code> to desired value and overflowing menu items will be truncated. You can also set <code>@dropmenu-min-width</code> to get rid of very narrow menus.</p>
+
+<div class="sw-example" id="">
+  <div class="btn-group dropdown sw-open" style="margin-right:20px">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      News
+      <span class="caret"></span>
+    </button>
+
+    <div class="dropdown-container">
+
+      <ul class="dropdown-menu">
+        <li><a href="#">New item</a></li>
+        <li><a href="#">Search...</a></li>
+      </ul>
+
+      <ul class="dropdown-menu">
+        <li class="dropdown-header">Recently added news (47)</li>
+        <li><a href="#">Li-fi 100 times faster than wi-fi'</a></li>
+        <li><a href="#">Pirate makes film to avoid being sued</a></li>
+        <li><a href="#">The truth about Facebook quizzes</a></li>
+        <li><a href="#">Cyber-thieves 'target Black Friday'</a></li>
+        <li><a href="#">Shrinking to Zero: The Raspberry Pi gets smaller</a></li>
+      </ul>
+
+    </div><!-- /dropdown-container -->
+  </div><!-- /dropdown -->
+</div>
+
+<h3>Keyboard Shortcuts</h3>
+
+<p>Keyboard shortcuts can really speed up your daily work with any web application. Libraries like <a href="https://craig.is/killing/mice">Mousetrap</a> simplify implementation of event handling. Use dropmenu to expose shortcuts in dropdown menus to make them easily remembered.  </p>
+
+<div class="sw-example" id="dropdown-shortcuts">
+  <div class="btn-group dropdown sw-open">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      File
+      <span class="caret"></span>
+    </button>
+
+
+      <ul id="list-1" class="dropdown-menu">
+        <li><a href="#" class="dropmenu-item">
+          <span class="dropmenu-item-label">New</span>
+          <small class="dropmenu-item-content">Ctrl+N</small>
+        </a></li>
+        <li><a href="#" class="dropmenu-item">
+          <span class="dropmenu-item-label">Edit</span>
+          <small class="dropmenu-item-content">Ctrl+E</small>
+        </a></li>
+        <li><a href="#" class="dropmenu-item">
+          <span class="dropmenu-item-label">Delete</span>
+          <small class="dropmenu-item-content">Ctrl+D</small>
+        </a></li>
+      </ul>
+
+  </div><!-- /dropdown -->
+
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    File
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+N<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+E<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+D<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
+</code></pre></div>
+<h3>Dropdown Positioning</h3>
+
+<p>Twitter Bootstrap allows you to change position of the dropdown menu, however,for top left or top right position, you need to add <code>.dropup</code> class, which is not very convenient. Dropmenu provides all uitility classes to force position of your dropdown menu. Just add appropriate class to the dropdown container:</p>
+
+<div class="sw-example" id="dropdown-positioning" style="text-align:center;padding: 260px 40px 240px;">
+
+<div class="btn-group dropdown sw-open" style="margin: 20px;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    World
+    <span class="caret"></span>
+  </button>
+  
+  <div class="dropdown-container dropdown-position-topright has-meta" data-meta="Top right" style="position:absolute">
+    <ul class="dropdown-menu">
+      <li><a href="#">Africa</a></li>
+      <li><a href="#">America</a></li>
+      <li><a href="#">Antarctica</a></li>
+      <li><a href="#">Asia</a></li>
+      <li><a href="#">Australia</a></li>
+      <li><a href="#">Europe</a></li>
+      <li><a href="#">South America</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="btn-group dropdown sw-open" style="margin: 20px;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    World
+    <span class="caret"></span>
+  </button>
+  
+  <div class="dropdown-container dropdown-position-topleft has-meta" data-meta="Top left" style="position:absolute">
+    <ul class="dropdown-menu">
+      <li><a href="#">Africa</a></li>
+      <li><a href="#">America</a></li>
+      <li><a href="#">Antarctica</a></li>
+      <li><a href="#">Asia</a></li>
+      <li><a href="#">Australia</a></li>
+      <li><a href="#">Europe</a></li>
+      <li><a href="#">South America</a></li>
+    </ul>
+  </div>
+</div>
+
+<p><br></p>
+
+<div class="btn-group dropdown sw-open" style="margin: 20px;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    World
+    <span class="caret"></span>
+  </button>
+  
+  <div class="dropdown-container dropdown-position-bottomright has-meta" data-meta="Bottom right" style="position:absolute">
+    <ul class="dropdown-menu">
+      <li><a href="#">Africa</a></li>
+      <li><a href="#">America</a></li>
+      <li><a href="#">Antarctica</a></li>
+      <li><a href="#">Asia</a></li>
+      <li><a href="#">Australia</a></li>
+      <li><a href="#">Europe</a></li>
+      <li><a href="#">South America</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="btn-group dropdown sw-open" style="margin: 20px;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    World
+    <span class="caret"></span>
+  </button>
+
+  <div class="dropdown-container has-meta meta-right" data-meta="Default: Bottom left" style="position:absolute">
+    <ul class="dropdown-menu">
+      <li><a href="#">Africa</a></li>
+      <li><a href="#">America</a></li>
+      <li><a href="#">Antarctica</a></li>
+      <li><a href="#">Asia</a></li>
+      <li><a href="#">Australia</a></li>
+      <li><a href="#">Europe</a></li>
+      <li><a href="#">South America</a></li>
+    </ul>
+  </div>
+</div>
+
+<p></div></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Top right: Aligns with the top right corner of the button. --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container dropdown-position-topright&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Top left: Aligns with the top left corner of the button. --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container dropdown-position-topleft&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Bottom left: Aligns with the bottom left corner of the button. --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container dropdown-position-bottomleft&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Bottom right: Aligns with the bottom right corner of the button. --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container dropdown-position-bottomright&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div>
+<h2>Inversed menu</h2>
+
+<h3><span class="text-muted">Plugin: </span>Dropdown Inverse</h3>
+
+<p>In some cases, you may want to use inversed color version of the menu. Dropmenu extends basic Twitter Bootstrap dropdown component with <code>.dropdown-inverse</code>, which changes its appereance. It works exactly the same like inversed navbar. Use it with or without the container element.</p>
+
+<div class="sw-example">
+  <div class="btn-group dropdown dropdown-inverse sw-open" style="margin-right:20px">
+    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Account
+      <span class="caret"></span>
+    </button>
+
+    <div class="dropdown-container">
+
+      <div class="dropdown-toolbar">
+        Signed in as<br>
+        <strong>Martin Staněk</strong>
+      </div><!-- /dropdown-toolbar -->
+
+      <div class="dropdown-divider"></div>
+
+      <ul class="dropdown-menu">
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Your stars</a></li>
+        <li class="active"><a href="#">Explore</a></li>
+        <li><a href="#">Integrations</a></li>
+        <li class="disabled"><a href="#">Help</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+
+    </div><!-- /dropdown-container -->
+  </div><!-- /dropdown -->
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown dropdown-inverse&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    Button title
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-toolbar&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Put desired header information here --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-toolbar --&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List item 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List item 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List Item 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-footer&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Put links or just simple text information here --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-footer --&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-container --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
+</code></pre></div>
+<h2>Submenus</h2>
+
+<h3><span class="text-muted">Component: </span>Dropdown Submenu</h3>
+
+<p>Sometimes just simple unordered list is not enough for a dropdown menu. If you want to give it more structure, use this extension. Dropmenu adds elements like toolbar (<code>.dropdown-toolbar</code>) and footer (<code>.dropdown-header</code>). You can even use more <code>.dropdown-menu</code> elements. Basically, all you&#39;ve even needed. </p>
+
+<div class="sw-example" id="dropdown-structure">
+  <div class="btn-group dropdown sw-open" style="margin-right:20px">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Account
+      <span class="caret"></span>
+    </button>
+
+    <div class="dropdown-container dropdown-container-slidemorph">
+
+      <div class="dropdown-toolbar">
+        Signed in as<br>
+        <strong>Martin Staněk</strong>
+      </div><!-- /dropdown-toolbar -->
+
+      <div class="dropdown-divider"></div>
+
+      <ul class="dropdown-menu">
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Your stars</a></li>
+        <li><a href="#">Explore</a></li>
+        <li class="dropdown-submenu">
+          <a href="#">Integrations</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Open</a></li>
+            <li><a href="#">In-progress</a></li>
+            <li><a href="#">Reopened</a></li>
+            <li><a href="#">Implemented</a></li>
+            <li><a href="#">Closed</a></li>
+            <li><a href="#">Done</a></li>
+            <li><a href="#">Todo</a></li>
+            <li><a href="#">Approved</a></li>
+            <li><a href="#">Released</a></li>
+          </ul>
+        </li>
         <li><a href="#">Help</a></li>
         <li class="divider"></li>
         <li><a href="#">Settings</a></li>
@@ -215,107 +609,9 @@
   <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-container --&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
 </code></pre></div>
-<h3>Component Overview</h3>
+<h3>Dropmenu Overview</h3>
 
-<div class="table-responsive sw-table">
-  <table class="table table-bordered">
-    <thead>
-     <tr>
-       <th style="width: 200px">Name</th>
-       <th style="width: 200px">Class</th>
-       <th style="width: 20px">Required</th>
-       <th>Usage</th>
-     </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Container</strong></td>
-        <td><code>.dropdown-container</code></td>
-        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
-        <td>Wrapper for different dropdown submodules.</td>
-      </tr>
-
-      <tr>
-        <td><strong>Toolbar</strong></td>
-        <td><code>.dropdown-toolbar</code></td>
-        <td></td>
-        <td>Useful for search field, specific actions, filters.</td>
-      </tr>
-
-      <tr>
-        <td><strong>Menu</strong></td>
-        <td><code>.dropdown-menu</code></td>
-        <td></td>
-        <td>Dropmenu adds more variables to play with (max-height, scrollbar, etc.).</td>
-      </tr>
-
-      <tr>
-        <td><strong>Footer</strong></td>
-        <td><code>.dropdown-footer</code></td>
-        <td></td>
-        <td>Stays fixed to the bottom of the Dropmenu. You can use it for context information or links.</td>
-      </tr>
-
-    </tbody>
-  </table>
-</div>
-
-<h2>Keyboard shortcuts</h2>
-
-<h3><span class="text-muted">Component: </span>Dropdown Item</h3>
-
-<p>Web applications have become more complex over the years. Especially JavaScript front-end apps can benefit from smart keyboard shortcuts.</p>
-
-<div class="sw-example" id="dropdown-shortcuts">
-  <div class="btn-group dropdown sw-open">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      File
-      <span class="caret"></span>
-    </button>
-
-
-      <ul id="list-1" class="dropdown-menu">
-        <li><a href="#" class="dropmenu-item">
-          <span class="dropmenu-item-label">New</span>
-          <small class="dropmenu-item-content">Ctrl+N</small>
-        </a></li>
-        <li><a href="#" class="dropmenu-item">
-          <span class="dropmenu-item-label">Edit</span>
-          <small class="dropmenu-item-content">Ctrl+E</small>
-        </a></li>
-        <li><a href="#" class="dropmenu-item">
-          <span class="dropmenu-item-label">Delete</span>
-          <small class="dropmenu-item-content">Ctrl+D</small>
-        </a></li>
-      </ul>
-
-  </div><!-- /dropdown -->
-
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-    File
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+N<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+E<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-label&quot;</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;dropmenu-item-content&quot;</span><span class="nt">&gt;</span>Ctrl+D<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
-</code></pre></div>
-<h3>Component Overview</h3>
+<h3>Plugin Overview</h3>
 
 <div class="table-responsive sw-table">
   <table class="table table-bordered">
@@ -353,266 +649,6 @@
   </table>
 </div>
 
-<h2>Choose any menu position</h2>
-
-<h3><span class="text-muted">Plugin: </span>Dropdown Positioning</h3>
-
-<p>Twitter Bootstrap allows you to change position of the dropdown menu, however,for top left or top right position, you need to add <code>.dropup</code> class, which is not very convenient. Dropmenu provides all uitility classes to force position of your dropdown menu. Just add appropriate class to the dropdown container:</p>
-
-<div class="sw-example" id="dropdown-positioning" style="text-align:center;padding: 260px 40px 240px;">
-
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
-    <span class="caret"></span>
-  </button>
-  
-  <div class="dropdown-container dropdown-position-topright has-meta" data-meta="Top right" style="position:absolute">
-    <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
-    <span class="caret"></span>
-  </button>
-  
-  <div class="dropdown-container dropdown-position-topleft has-meta" data-meta="Top left" style="position:absolute">
-    <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
-    </ul>
-  </div>
-</div>
-
-<p><br></p>
-
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
-    <span class="caret"></span>
-  </button>
-  
-  <div class="dropdown-container dropdown-position-bottomright has-meta" data-meta="Bottom right" style="position:absolute">
-    <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
-    <span class="caret"></span>
-  </button>
-
-  <div class="dropdown-container has-meta meta-right" data-meta="Default: Bottom left" style="position:absolute">
-    <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
-    </ul>
-  </div>
-</div>
-
-<p></div></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-    World
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container dropdown-position-bottomright&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Africa<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>America<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Antarctica<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Asia<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Australia<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Europe<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>South America<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-container --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
-</code></pre></div>
-<h3>Positioning Overview</h3>
-
-<p>This table gives you a quick overview of all utility classes you can use.</p>
-
-<div class="table-responsive sw-table">
-  <table class="table table-bordered">
-    <thead>
-     <tr>
-       <th style="width: 200px">Name</th>
-       <th style="width: 300px">Class</th>
-       <th>Usage</th>
-     </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Top right</strong></td>
-        <td><code>.dropdown-position-topright</code></td>
-        <td>Aligns with the top right corner of the button.</td>
-      </tr>
-
-      <tr>
-        <td><strong>Top left</strong></td>
-        <td><code>.dropdown-position-topleft</code></td>
-        <td>Aligns with the top left corner of the button.</td>
-      </tr>
-
-      <tr>
-        <td><strong>Bottom left</strong></td>
-        <td><code>.dropdown-position-bottomleft</code></td>
-        <td>Aligns with the bottom left corner of the button.</td>
-      </tr>
-
-      <tr>
-        <td><strong>Bottom right</strong></td>
-        <td><code>.dropdown-position-bottomright</code></td>
-        <td>Aligns with the bottom right corner of the button.</td>
-      </tr>
-
-    </tbody>
-  </table>
-</div>
-
-<h2>Inversed menu</h2>
-
-<h3><span class="text-muted">Plugin: </span>Dropdown Inverse</h3>
-
-<p>In some cases, you may want to inversed version of the menu. Dropmenu extends basic Twitter Bootstrap dropdown component with <code>.dropdown-inverse</code>, which changes its appereance. It works exactly the same like inversed navbar. Use it with or without the container component.</p>
-
-<div class="sw-example">
-  <div class="btn-group dropdown dropdown-inverse sw-open" style="margin-right:20px">
-    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Account
-      <span class="caret"></span>
-    </button>
-
-    <div class="dropdown-container">
-
-      <div class="dropdown-toolbar">
-        Signed in as<br>
-        <strong>Martin Staněk</strong>
-      </div><!-- /dropdown-toolbar -->
-
-      <div class="dropdown-divider"></div>
-
-      <ul class="dropdown-menu">
-        <li><a href="#">Your profile</a></li>
-        <li><a href="#">Your stars</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">Integrations</a></li>
-        <li><a href="#">Help</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
-
-    </div><!-- /dropdown-container -->
-  </div><!-- /dropdown -->
-
-  <div class="btn-group dropdown dropdown-inverse sw-open" style="margin-right:20px">
-    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Statuses: All
-      <span class="caret"></span>
-    </button>
-
-    <ul class="dropdown-menu">
-      <li><a href="#">Open</a></li>
-      <li><a href="#">In-progress</a></li>
-      <li><a href="#">Reopened</a></li>
-      <li><a href="#">Implemented</a></li>
-      <li><a href="#">Closed</a></li>
-      <li><a href="#">Done</a></li>
-      <li><a href="#">Todo</a></li>
-      <li><a href="#">Approved</a></li>
-      <li><a href="#">Released</a></li>
-    </ul>
-
-  </div><!-- /dropdown -->
-
-  <div class="btn-group dropdown dropdown-inverse sw-open">
-    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Support
-      <span class="caret"></span>
-    </button>
-
-    <div class="dropdown-container">
-
-      <div class="dropdown-table">
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">By Resource</li>
-          <li><a href="#">Ask the experts</a></li>
-          <li><a href="#">Chat or call</a></li>
-          <li><a href="#">Knowledge base</a></li>
-          <li><a href="#">Research</a></li>
-        </ul>
-
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">By Audience</li>
-          <li><a href="#">For home users</a></li>
-          <li><a href="#">For small business</a></li>
-          <li><a href="#">For IT professionals</a></li>
-          <li><a href="#">For developers</a></li>
-        </ul>
-      </div><!-- /dropdown-table -->
-
-    </div><!-- /dropdown-container -->
-  </div><!-- /dropdown -->
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropdown dropdown-inverse&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">aria-haspopup=</span><span class="s">&quot;true&quot;</span> <span class="na">aria-expanded=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-    Button title
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-container&quot;</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-toolbar&quot;</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- Put desired header information here --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-toolbar --&gt;</span>
-
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List item 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List item 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>List Item 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-footer&quot;</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- Put links or just simple text information here --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-footer --&gt;</span>
-
-  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown-container --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /dropdown --&gt;</span>
-</code></pre></div>
-<h3>Component Overview</h3>
-
 <div class="table-responsive sw-table">
   <table class="table table-bordered">
     <thead>
@@ -624,6 +660,46 @@
      </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><strong>Container</strong></td>
+        <td><code>.dropdown-container</code></td>
+        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
+        <td>Abstracted wrapper for dropdown menu.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Toolbar</strong></td>
+        <td><code>.dropdown-toolbar</code></td>
+        <td></td>
+        <td>Fixed header can hold text, specific actions, filters and even a search field.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Menu</strong></td>
+        <td><code>.dropdown-menu</code></td>
+        <td></td>
+        <td>
+          <p>Dropmenu adds more variables to play with. You can limit dimensions, make it scrollable or truncate text in list items.</p>
+          <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">// Limits height of the menu, so it can be scrollable</span>
+@dropdown-menu-max-height: <span class="nt">330px</span>;
+<span class="c">// Minimal width prevents very narrow dropdowns</span>
+@dropdown-menu-min-width:  <span class="nt">150px</span>;
+<span class="c">// Maximal width prevents very wide dropdowns</span>
+@dropdown-menu-max-width:  <span class="nt">330px</span>;
+<span class="c">// If true, menu items are truncated when wider than '@dropdown-menu-max-width'</span>
+@dropdown-menu-truncate:   <span class="nt">true</span>;
+</code></pre></div>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Footer</strong></td>
+        <td><code>.dropdown-footer</code></td>
+        <td></td>
+        <td>Stays fixed to the bottom of the Dropmenu, useful for context information or links.</td>
+      </tr>
+
       <tr>
         <td><strong>Container</strong></td>
         <td><code>.dropdown-inverse</code></td>
