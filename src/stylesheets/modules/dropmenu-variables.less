@@ -2,28 +2,29 @@
 // VARIABLES: Dropmenu
 // --------------------------------------------------
 
-// @dropmenu-breakpoint:       @screen-md;
+@dropdown-breakpoint:       		@grid-float-breakpoint;
 
 // Local variables
-@dropdown-padding-horizontal: 20px;
-@dropdown-padding-vertical:   5px;
+@dropdown-padding-horizontal: 		20px;
+@dropdown-padding-vertical:   		5px;
 
 
 // Dropdown toolbar
 // -----------------------
 @dropdown-toolbar-padding:          @dropdown-padding-vertical @dropdown-padding-horizontal;
 
+
 // Dropdown menu
 // -----------------------
 
 // Limits height of the menu, so it can be scrollable
-@dropdown-menu-max-height:  none;
+@dropdown-menu-max-height:  330px;
 // Minimal width prevents very narrow dropdowns
-@dropdown-menu-min-width:   220px;
+@dropdown-menu-min-width:   200px;
 // Maximal width prevents very wide dropdowns
 @dropdown-menu-max-width:   330px;
 // If true, menu items are truncated when wider than '@dropdown-menu-max-width'
-@dropdown-menu-truncate:    false;
+@dropdown-menu-truncate:    true;
 
 // Dropdown inverse menu
 // -----------------------
@@ -60,10 +61,9 @@
 
 // Dropdown submenu
 // -----------------------
-@dropdown-menu-hoverable:                false;
+@dropdown-menu-action:                	'none';
 @dropdown-menu-icon-width:				 12px;
 
 // Dropdown footer
 // -----------------------
-
 @dropdown-footer-padding:           @dropdown-padding-vertical @dropdown-padding-horizontal;

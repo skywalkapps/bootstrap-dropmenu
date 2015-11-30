@@ -5,7 +5,7 @@
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 220px;
+  min-width: 200px;
   max-width: 330px;
   margin: 2px 0 0;
   list-style: none;
@@ -18,19 +18,33 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
-.dropdown-container .dropdown-menu {
+.dropdown-container > .dropdown-menu {
   position: static;
   z-index: 1000;
   float: none!important;
   padding: 10px 0;
   margin: 0;
   border: 0;
+  background: transparent;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  max-height: 330px;
+  overflow-y: auto;
 }
-.dropdown-container .dropdown-menu + .dropdown-menu {
+.dropdown-container > .dropdown-menu + .dropdown-menu {
   padding-top: 0;
+}
+.dropdown-menu > li > a {
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 .dropdown-toggle {
   cursor: pointer;
@@ -79,13 +93,23 @@
     display: block;
   }
 }
-@media (min-width: 992px) {
-  .open > .dropdown-container > .dropdown-table {
+@media (min-width: 768px) {
+  .dropdown-table {
     display: table;
   }
-  .open > .dropdown-container > .dropdown-table > .dropdown-menu {
+  .dropdown-table > .dropdown-menu {
     display: table-cell;
   }
+}
+.dropdown-table > .dropdown-menu {
+  position: static;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  max-height: 330px;
+  overflow-y: auto;
 }
 .dropdown-position-topright {
   top: auto;
@@ -113,7 +137,6 @@
   text-align: right;
   max-width: 60px;
   right: 20px;
-  top: 5px;
   color: #777777;
   overflow: hidden;
   white-space: nowrap;
@@ -168,88 +191,19 @@ small.dropmenu-item-content {
 .dropdown-inverse .dropdown-header {
   color: #777777;
 }
-.dropdown-submenu > a:after {
-  top: 50%;
-  right: 20px;
-  margin: -4px 0 0 0;
-  position: absolute;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e080";
-  font-size: 9.6px;
-  color: #777777;
-}
-.dropdown-submenu > a > .dropdown-menu > li > a {
-  padding-left: 40px !important;
-}
-.dropdown-container-slidemorph {
-  overflow: hidden;
-  min-width: auto;
-  max-width: none;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-.dropdown-container-slidemorph .dropdown-menu {
-  min-width: auto;
-  padding: 3px 0;
-}
-.dropdown-container-slidemorph .dropdown-submenu {
+.dropdown-submenu .dropdown-menu {
   position: static;
+  display: block;
+  margin: 0;
+  list-style: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  width: 100%;
 }
-.dropdown-container-slidemorph .dropdown-submenu > .dropdown-menu {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  -moz-transition: -moz-transform .3s ease-in-out;
-  -o-transition: -o-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-}
-.dropdown-container-slidemorph > .dropdown-menu > .dropdown-submenu > ul {
-  position: absolute;
-  top: -3px;
-  right: 0;
-  left: auto;
-  border-radius: 0 4px 4px;
-  -webkit-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  -o-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-}
-.dropdown-container-slidemorph .dropdown-submenu.open > ul {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-  visibility: visible;
-}
-.dropdown-backlink {
-  border-bottom: 1px solid #e5e5e5;
-}
-.dropdown-backlink > a {
-  position: relative;
-  white-space: nowrap!important;
-}
-.dropdown-backlink > a:before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin: -4px 4px 0 0;
-  position: relative;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e079" !important;
-  font-size: 9.6px;
-  color: #777777 !important;
-  width: 12px;
+.dropdown-submenu > .dropdown-menu > li > a {
+  padding-left: 30px;
 }
 .dropdown-menu--selectable > li > a:before {
   position: absolute;

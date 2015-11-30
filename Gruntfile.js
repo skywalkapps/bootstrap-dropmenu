@@ -13,7 +13,6 @@ module.exports = function(grunt) {
   // Load grunt configuration
   require('load-grunt-config')(grunt);
 
-
   // BUILD TASKS
   // -------------------------
 

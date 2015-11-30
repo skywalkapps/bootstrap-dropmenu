@@ -1,0 +1,84 @@
+//
+// PLUGIN: Dropmenu slidemorph
+// This module extends dropdown-submenu to create cool slide animation 
+
+// @author: Martin Staněk (https://github.com/skywalkapps)
+// @require: dropdown-submenu    
+// ----------------------------------------------------
+
+// Extends .dropdown-container
+.dropdown-container-slidemorph {
+    overflow: hidden;
+    min-width: auto; // we need exact sizes, not limited by min/max width
+    max-width: none;
+    .transition(~"all .3s ease-in-out");
+
+    .dropdown-menu {
+    	min-width: auto;
+    	padding: 3px 0;
+    }
+    // .js & > .dropdown-menu {
+    & .dropdown-submenu > .dropdown-menu {
+    	// display: block;
+		// .transition(~"visibility 0s .5s");
+	}
+	
+	.dropdown-submenu {
+		position: static;
+	}
+
+
+	.dropdown-submenu > .dropdown-menu {
+		.transition-transform(~".3s ease-in-out");
+	}
+
+	// &:hover .dropdown-menu {
+	// 	display: block;
+	// }
+
+	// First level submenu
+	> .dropdown-menu > .dropdown-submenu > ul {
+		position: absolute;
+		top: -3px;
+		right: 0;
+		left: auto;
+		border-radius: 0 @border-radius-base @border-radius-base; 
+		.translate(100%, 0);
+	}
+	
+	.dropdown-submenu.open > ul {
+		.translate(0, 0);
+		visibility: visible;
+		// .transition(~"visibility 0s .5s");
+	}
+}
+
+
+.dropdown-backlink {
+	border-bottom: 1px solid @dropdown-divider-bg;
+	
+	> a {
+	  position: relative;
+	  white-space: nowrap!important; // override deafult bootstrap link style
+
+
+	  &:before {
+	  	position: absolute;
+	  	left: 0;
+	  	top: 50%;
+	  	margin: -4px 4px 0 0;
+		position: relative;
+		display: inline-block;
+		font-family: 'Glyphicons Halflings';
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+  		content: "\e079"!important;
+		font-size: .8 * @font-size-small;
+		color: @gray-light!important;
+		width: @dropdown-menu-icon-width;
+	  }
+	}
+}
