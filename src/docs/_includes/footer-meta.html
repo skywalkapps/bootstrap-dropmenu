@@ -1,5 +1,17 @@
-<!-- Javascripts
-    ================================================== -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="{{ site.baseurl }}/libs/bootstrap/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/javascripts/bootstrap-dropmenu.js"></script>
+<!-- 
+	Javascripts
+	================================================== 
+-->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="{{ site.baseurl }}/libs/bootstrap/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/javascripts/bootstrap-dropmenu.js"></script>
+
+<script>
+$(function(){
+  $('.sw-aside').affix({
+    offset: {
+      top: $('.sw-header').outerHeight() - 45 // margin
+    }
+  })
+})
+</script>

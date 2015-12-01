@@ -6,7 +6,6 @@ description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown 
 
 ---
 
-<a name="code"></a>
 ### Dropmenu Structure
 
 Basic Bootstrap dropdown allow you tu use only one `.dropdown-menu` class applied to an unordered list. Dropmenu adds `.dropdown-container`, which serves as a wrapper for more elements. You can use toolbar (`.dropdown-toolbar`),footer (`.dropdown-footer`) and even more `ul.dropdown-menu` elements. Basically, all you've ever needed. 
@@ -44,7 +43,7 @@ Basic Bootstrap dropdown allow you tu use only one `.dropdown-menu` class applie
   </div><!-- /dropdown -->
 </div>
 
-```html
+~~~html
 <div class="btn-group dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <i class="glyphicon glyphicon-user"></i>
@@ -73,7 +72,7 @@ Basic Bootstrap dropdown allow you tu use only one `.dropdown-menu` class applie
 
   </div><!-- /dropdown-container -->
 </div><!-- /dropdown -->
-```
+~~~
 
 ### Scrolling 
 
@@ -153,7 +152,7 @@ Customize height of the menu by setting `@dropmenu-max-height` variable. If maxi
 
 Not only height, but also width of the menu can be limited. Set `@dropmenu-max-width` to desired value and overflowing menu items will be truncated. You can also set `@dropmenu-min-width` to get rid of very narrow menus.
 
-<div class="sw-example" id="">
+<div class="sw-example" style="overflow:auto">
   <div class="btn-group dropdown sw-open" style="margin-right:20px">
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       News
@@ -212,7 +211,7 @@ Keyboard shortcuts can really speed up your daily work with any web application.
 
 </div>
 
-```html
+~~~html
 <div class="btn-group dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     File
@@ -235,95 +234,75 @@ Keyboard shortcuts can really speed up your daily work with any web application.
   </ul>
 
 </div><!-- /dropdown -->
-```
+~~~
 
 ### Dropdown Positioning
 
 Twitter Bootstrap allows you to change position of the dropdown menu, however,for top left or top right position, you need to add `.dropup` class, which is not very convenient. Dropmenu provides all uitility classes to force position of your dropdown menu. Just add appropriate class to the dropdown container:
 
-<div class="sw-example" id="dropdown-positioning" style="text-align:center;padding: 260px 40px 240px;">
+<div class="sw-example" id="dropdown-positioning" style="text-align:center">
 
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
+<div class="btn-group dropdown" style="margin: 20px;">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
+    Top right
     <span class="caret"></span>
   </button>
   
-  <div class="dropdown-container dropdown-position-topright has-meta" data-meta="Top right" style="position:absolute">
+  <div class="dropdown-container dropdown-position-topright">
     <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
     </ul>
   </div>
 </div>
 
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
+<div class="btn-group dropdown" style="margin: 20px;">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
+    Top left
     <span class="caret"></span>
   </button>
   
-  <div class="dropdown-container dropdown-position-topleft has-meta" data-meta="Top left" style="position:absolute">
+  <div class="dropdown-container dropdown-position-topleft">
     <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
     </ul>
   </div>
 </div>
 
 <br>
 
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
+<div class="btn-group dropdown" style="margin: 20px;">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
+    Bottom Right
     <span class="caret"></span>
   </button>
   
-  <div class="dropdown-container dropdown-position-bottomright has-meta" data-meta="Bottom right" style="position:absolute">
+  <div class="dropdown-container dropdown-position-bottomright">
     <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
     </ul>
   </div>
 </div>
 
 
-<div class="btn-group dropdown sw-open" style="margin: 20px;">
+<div class="btn-group dropdown" style="margin: 20px;">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    World
+    Bottom Left
     <span class="caret"></span>
   </button>
 
-  <div class="dropdown-container has-meta meta-right" data-meta="Default: Bottom left" style="position:absolute">
+  <div class="dropdown-container">
     <ul class="dropdown-menu">
-      <li><a href="#">Africa</a></li>
-      <li><a href="#">America</a></li>
-      <li><a href="#">Antarctica</a></li>
-      <li><a href="#">Asia</a></li>
-      <li><a href="#">Australia</a></li>
-      <li><a href="#">Europe</a></li>
-      <li><a href="#">South America</a></li>
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
     </ul>
   </div>
 </div>
 </div>
 
-```html
+~~~html
 <!-- Top right: Aligns with the top right corner of the button. -->
 <div class="dropdown-container dropdown-position-topright"></div>
 
@@ -335,11 +314,9 @@ Twitter Bootstrap allows you to change position of the dropdown menu, however,fo
 
 <!-- Bottom right: Aligns with the bottom right corner of the button. -->
 <div class="dropdown-container dropdown-position-bottomright"></div>
-```
+~~~
 
-## Inversed menu
-
-### <span class="text-muted">Plugin: </span>Dropdown Inverse
+### Inversed Theme
 
 In some cases, you may want to use inversed color version of the menu. Dropmenu extends basic Twitter Bootstrap dropdown component with `.dropdown-inverse`, which changes its appereance. It works exactly the same like inversed navbar. Use it with or without the container element.
 
@@ -374,7 +351,7 @@ In some cases, you may want to use inversed color version of the menu. Dropmenu 
   </div><!-- /dropdown -->
 </div>
 
-```html
+~~~html
 <div class="btn-group dropdown dropdown-inverse">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Button title
@@ -399,189 +376,20 @@ In some cases, you may want to use inversed color version of the menu. Dropmenu 
 
   </div><!-- /dropdown-container -->
 </div><!-- /dropdown -->
-```
+~~~
 
-## Submenus
+## Dropmenu Overview
 
-### <span class="text-muted">Component: </span>Dropdown Submenu
+### <span class="text-muted">Module: </span>Dropmenu Structure
 
-Sometimes just simple unordered list is not enough for a dropdown menu. If you want to give it more structure, use this extension. Dropmenu adds elements like toolbar (`.dropdown-toolbar`) and footer (`.dropdown-header`). You can even use more `.dropdown-menu` elements. Basically, all you've even needed. 
+This table gives you a quick overview of elements and variables.
 
-<div class="sw-example" id="dropdown-structure">
-  <div class="btn-group dropdown sw-open" style="margin-right:20px">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Account
-      <span class="caret"></span>
-    </button>
-
-    <div class="dropdown-container dropdown-container-slidemorph">
-
-      <div class="dropdown-toolbar">
-        Signed in as<br>
-        <strong>Martin Staněk</strong>
-      </div><!-- /dropdown-toolbar -->
-
-      <div class="dropdown-divider"></div>
-
-      <ul class="dropdown-menu">
-        <li><a href="#">Your profile</a></li>
-        <li><a href="#">Your stars</a></li>
-        <li><a href="#">Explore</a></li>
-        <li class="dropdown-submenu">
-          <a href="#">Integrations</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Open</a></li>
-            <li><a href="#">In-progress</a></li>
-            <li><a href="#">Reopened</a></li>
-            <li><a href="#">Implemented</a></li>
-            <li><a href="#">Closed</a></li>
-            <li><a href="#">Done</a></li>
-            <li><a href="#">Todo</a></li>
-            <li><a href="#">Approved</a></li>
-            <li><a href="#">Released</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Help</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Log out</a></li>
-      </ul>
-
-    </div><!-- /dropdown-container -->
-  </div><!-- /dropdown -->
-
-  <div class="btn-group dropdown sw-open" style="margin-right:20px">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Statuses: All
-      <span class="caret"></span>
-    </button>
-
-    <div class="dropdown-container">
-
-      <ul class="dropdown-menu">
-        <li><a href="#">Open</a></li>
-        <li><a href="#">In-progress</a></li>
-        <li><a href="#">Reopened</a></li>
-        <li><a href="#">Implemented</a></li>
-        <li><a href="#">Closed</a></li>
-        <li><a href="#">Done</a></li>
-        <li><a href="#">Todo</a></li>
-        <li><a href="#">Approved</a></li>
-        <li><a href="#">Released</a></li>
-      </ul>
-
-      <div class="dropdown-footer">
-        <a href="#"><i class="glyphicon glyphicon-cog"></i> Workflow settings</a>
-      </div><!-- /dropdown-footer -->
-
-    </div><!-- /dropdown-container -->
-  </div><!-- /dropdown -->
-
-  <div class="btn-group dropdown sw-open">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Support
-      <span class="caret"></span>
-    </button>
-
-    <div class="dropdown-container">
-
-      <div class="dropdown-table">
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">By Resource</li>
-          <li><a href="#">Ask the experts</a></li>
-          <li><a href="#">Chat or call</a></li>
-          <li><a href="#">Knowledge base</a></li>
-          <li><a href="#">Research</a></li>
-        </ul>
-
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">By Audience</li>
-          <li><a href="#">For home users</a></li>
-          <li><a href="#">For small business</a></li>
-          <li><a href="#">For IT professionals</a></li>
-          <li><a href="#">For developers</a></li>
-        </ul>
-      </div><!-- /dropdown-table -->
-
-    </div><!-- /dropdown-container -->
-  </div><!-- /dropdown -->
-</div>
-
-```html
-<div class="btn-group dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Button title
-    <span class="caret"></span>
-  </button>
-
-  <div class="dropdown-container">
-
-    <div class="dropdown-toolbar">
-      <!-- Put desired header information here -->
-    </div><!-- /dropdown-toolbar -->
-
-    <ul class="dropdown-menu">
-      <li><a href="#">List item 1</a></li>
-      <li><a href="#">List item 2</a></li>
-      <li><a href="#">List Item 2</a></li>
-    </ul>
-
-    <div class="dropdown-footer">
-      <!-- Put links or just simple text information here -->
-    </div><!-- /dropdown-footer -->
-
-  </div><!-- /dropdown-container -->
-</div><!-- /dropdown -->
-```
-
-
-
-### Dropmenu Overview
-
-### Plugin Overview
-
-<div class="table-responsive sw-table">
-  <table class="table table-bordered">
-    <thead>
-     <tr>
-       <th style="width: 150px">Name</th>
-       <th style="width: 250px">Class</th>
-       <th style="width: 20px">Required</th>
-       <th>Usage</th>
-     </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Item</strong></td>
-        <td><code>.dropdown-item</code></td>
-        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td><strong>Item label</strong></td>
-        <td><code>.dropdown-item-label</code></td>
-        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td><strong>Item content</strong></td>
-        <td><code>.dropdown-item-content</code></td>
-        <td></td>
-        <td></td>
-      </tr>
-
-    </tbody>
-  </table>
-</div>
 <div class="table-responsive sw-table">
   <table class="table table-bordered">
     <thead>
      <tr>
        <th style="width: 200px">Name</th>
        <th style="width: 200px">Class</th>
-       <th style="width: 20px">Required</th>
        <th>Usage</th>
      </tr>
     </thead>
@@ -589,50 +397,146 @@ Sometimes just simple unordered list is not enough for a dropdown menu. If you w
       <tr>
         <td><strong>Container</strong></td>
         <td><code>.dropdown-container</code></td>
-        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
         <td>Abstracted wrapper for dropdown menu.</td>
       </tr>
 
       <tr>
         <td><strong>Toolbar</strong></td>
         <td><code>.dropdown-toolbar</code></td>
-        <td></td>
         <td>Fixed header can hold text, specific actions, filters and even a search field.</td>
       </tr>
 
       <tr>
         <td><strong>Menu</strong></td>
         <td><code>.dropdown-menu</code></td>
-        <td></td>
         <td>
           <p>Dropmenu adds more variables to play with. You can limit dimensions, make it scrollable or truncate text in list items.</p>
-          <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">// Limits height of the menu, so it can be scrollable</span>
-@dropdown-menu-max-height: <span class="nt">330px</span>;
-<span class="c">// Minimal width prevents very narrow dropdowns</span>
-@dropdown-menu-min-width:  <span class="nt">150px</span>;
-<span class="c">// Maximal width prevents very wide dropdowns</span>
-@dropdown-menu-max-width:  <span class="nt">330px</span>;
-<span class="c">// If true, menu items are truncated when wider than '@dropdown-menu-max-width'</span>
-@dropdown-menu-truncate:   <span class="nt">true</span>;
-</code></pre></div>
 
+          <strong>Variables:</strong>
+          <ul>
+            <li><code>@dropdown-menu-max-height: 330px;</code><br><span class="text-muted">Limits height of the menu, so it can be scrollable</span></li>
+            <li><code>@dropdown-menu-min-width: 150px;</code><br><span class="text-muted">Minimal width prevents very narrow dropdowns</span></li>
+            <li><code>@dropdown-menu-max-width: 330px;</code><br><span class="text-muted">Maximal width prevents very wide dropdowns</span></li>
+            <li><code>@dropdown-menu-truncate: true</code><br><span class="text-muted">If true, menu items are truncated when wider than '@dropdown-menu-max-width'</span></li>
+          </ul>
         </td>
       </tr>
 
       <tr>
         <td><strong>Footer</strong></td>
         <td><code>.dropdown-footer</code></td>
-        <td></td>
         <td>Stays fixed to the bottom of the Dropmenu, useful for context information or links.</td>
       </tr>
 
+    </tbody>
+  </table>
+</div>
+
+### <span class="text-muted">Module: </span>Dropmenu Item
+
+This table gives you a quick overview of elements and variables.
+
+<div class="table-responsive sw-table">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 150px">Name</th>
+       <th style="width: 250px">Class</th>
+       <th>Usage</th>
+     </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td><strong>Container</strong></td>
-        <td><code>.dropdown-inverse</code></td>
-        <td><i class="glyphicon glyphicon-ok text-muted"></i></td>
-        <td>Inverse color variant of the dropdown menu.</td>
+        <td><strong>Item</strong></td>
+        <td><code>.dropdown-item</code></td>
+        <td>Apply this class to &lt;li> element of the dropdown menu.</td>
       </tr>
 
+      <tr>
+        <td><strong>Item label</strong></td>
+        <td><code>.dropdown-item-label</code></td>
+        <td>Wraps text of the item.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Item content</strong></td>
+        <td><code>.dropdown-item-content</code></td>
+        <td>Additional content of the list item, f.e. keyboard shortcuts.</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+### <span class="text-muted">Module: </span>Dropmenu Inverse
+
+This table gives you a quick overview of elements and variables.
+
+<div class="table-responsive sw-table">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 150px">Name</th>
+       <th style="width: 250px">Class</th>
+       <th>Usage</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Inverse modifier</strong> <span class="text-muted">(applies to .dropdown)</span></td>
+        <td><code>.dropdown-inverse</code></td>
+        <td>
+          <p>Inverse color variant of the dropdown menu.</p>
+
+          <strong>Variables:</strong>
+          <ul>
+            <li>Dropmenu provides set of variables with namespace <code>@dropdown-inverse-</code> to change the theme of the menu. For more information, see <em>dropdown-variables.less</em></li>
+            </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### <span class="text-muted">Module: </span>Dropmenu Positioning
+
+This table gives you a quick overview of positioning utility classes.
+
+<div class="table-responsive sw-table">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 150px">Name</th>
+       <th style="width: 250px">Class</th>
+       <th>Usage</th>
+     </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><strong>Position Top Right</strong></td>
+        <td><code>.dropdown-position-topright</code></td>
+        <td>Aligns with the top right corner of the trigger button.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Position Top Left</strong></td>
+        <td><code>.dropdown-position-topleft</code></td>
+        <td>Aligns with the top left corner of the trigger button.</td>
+      </tr>
+
+      <tr>
+        <td><strong>Position Bottom Left</strong></td>
+        <td><code>.dropdown-position-bottomleft</code></td>
+        <td>Aligns with the bottom left corner of the trigger button.</td>
+      </tr>
+
+       <tr>
+        <td><strong>Position Bottom Right</strong></td>
+        <td><code>.dropdown-position-bottomright</code></td>
+        <td>Aligns with the bottom right corner of the trigger button.</td>
+      </tr>
+   
     </tbody>
   </table>
 </div>

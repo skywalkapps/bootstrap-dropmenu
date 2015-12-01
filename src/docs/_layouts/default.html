@@ -7,7 +7,7 @@
   </head>
 
 
-  <body class="sw-docs">
+  <body class="sw-docs" data-spy="scroll" data-target=".sw-aside">
     <a class="sr-only" href="#content">Skip navigation</a>
 
     <!-- Page search and navigation -->
@@ -35,7 +35,16 @@
       </div><!-- /sw-header -->
 
       <div class="container">
-        {{ content }}
+        <div class="row">
+          <div class="col-md-9 content">
+            {{ content }}
+          </div>
+        
+          <div class="col-md-3 hidden-sm hidden-xs">
+            {% include nav-aside.html %}
+          </div>
+        </div>
+
 
         {% include footer.html %}
       </div>

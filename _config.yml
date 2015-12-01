@@ -1,9 +1,10 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         kramdown
 
 kramdown:
   auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
 
 # Permalinks
 permalink:        pretty
@@ -18,9 +19,12 @@ baseurl:		  ""
 encoding:         UTF-8
 
 # Custom vars
-current_version:  0.1.2
+current_version:  0.9.0
 repo:             https://github.com/skywalkapps/bootstrap-dropmenu.git
 
 vendor:			  ./vendor
 download:
   source:         https://github.com/skywalkapps/bootstrap-dropmenu/archive/master.zip
+  dist:           https://github.com/skywalkapps/bootstrap-dropmenu/releases/download/v0.9.0/bootstrap-dropmenu-0.9.0-dist.zip
+
+blog:             http://skywalkapps.github/articles
