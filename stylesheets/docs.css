@@ -6735,19 +6735,31 @@ button.close {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  margin-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
 }
 .sw-header p {
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .sw-header h1 {
   color: #fff;
-  font-size: 48px;
+  font-size: 28.8px;
   border-bottom: 0;
+}
+@media (min-width: 992px) {
+  .sw-header {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .sw-header h1 {
+    font-size: 48px;
+  }
+  .sw-header p {
+    font-size: 24px;
+  }
 }
 .sw-header .version {
   display: inline-block;
@@ -6759,9 +6771,36 @@ button.close {
   margin-bottom: 0;
   border-color: transparent;
 }
+.sw-aside.affix {
+  top: 80px;
+}
 .sw-docs .l-body .container-fluid {
   padding-left: 60px;
   padding-right: 60px;
+}
+.content > h3:first-child {
+  margin-top: 0;
+}
+.content > h3:before,
+.content > h2:before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 0;
+  height: 4em;
+  margin-top: -4em;
+}
+.sw-aside .nav > li > a,
+.sw-aside .nav > li > a:hover,
+.sw-aside .nav > li > a:focus {
+  color: #555555;
+}
+.sw-aside .nav > .active > a,
+.sw-aside .nav > .active > a:hover,
+.sw-aside .nav > .active > a:focus {
+  color: #00b593;
+  font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 .logo {
   display: inline-block;
@@ -6772,6 +6811,11 @@ button.close {
   background-repeat: no-repeat;
   background-position: 100% 9px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAXCAYAAAD6FjQuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZxJREFUeNq81UsoRFEYwPE7XgvKQshGEqUIC4qSx8ICC2wosbMTG6tZs5FiYaJmY2GjkFKGjccCS48spSiSmkJjobz/J99iut3HmXvdOfXr3M65M9+cc77vTMiIRYwA2hiWzIOhAIJl4xHF+EqeyAhgVQ0oQKN54r+DhRCW50mvwapc5rPQhE30ydgg1tCMTN0zU3t/g0K8WczPYBx5Dt/xgDmdldUjV3qrFpYzasW2aW5Dzq4U8zrBaqVvcXjnHcfoxZaMrWMAp/jWPbMO6Ts13v3BrDxPpVpnavnXyJFfX4F7jTq7Q0kq2agyKCqBDOmjGrvxgWmrCbsPlmEH3abxHuyi3CXgonUR/m1jpSSC0o42qR279olD7OMMF4i7V3ws0kUf83mbvMounLgFU30+qlEnq+p3KdJnrGJPVnUrmWjoBDM3VaQLGLaYW8EEEqku3+5cnjAiWzuUNL6MUe+3tHOdFckWqevqRbI04TWYW1LEJXkMudETPpJIKwOPpD/w+2enE+xS+vN0BVPndZWOYKqmauTW8NV+BRgA2oJPXYs5YrQAAAAASUVORK5CYII=);
+}
+@media (max-width: 480px) {
+  .logo small {
+    display: none;
+  }
 }
 .sw-subsection {
   margin-bottom: 40px;
@@ -6802,6 +6846,9 @@ button.close {
 }
 .sw-example .btn-group {
   vertical-align: top;
+}
+.sw-example .btn-group + .btn-group {
+  margin-top: 50px;
 }
 .highlight {
   margin-bottom: 40px;
@@ -6921,6 +6968,19 @@ fieldset[disabled] .l-sidebar-body > .navbar-btn.focus {
 .l-sidebar-body > .navbar .nav .btn-group {
   margin-left: 10px;
 }
+.btn-primary {
+  background-color: #00b593;
+  border-color: #00b593;
+  border-radius: 2px;
+  font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background: #00826a;
+  border-color: #00826a;
+}
 .btn-outline {
   font-size: 16px;
   background: transparent;
@@ -6963,8 +7023,11 @@ fieldset[disabled] .l-sidebar-body > .navbar-btn.focus {
 .sw-panel .form-group {
   margin-bottom: 0;
 }
-.sw-example + .highlight {
+.sw-example + .highlighter-rouge {
   margin-top: -26px;
+}
+.sw-example + .highlighter-rouge pre {
+  border-radius: 0 0 6px 6px;
 }
 .sw-footer {
   margin-top: 20px;
@@ -7136,31 +7199,31 @@ h4,
   font-family: "Gibson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-.l-body > .container > h2 {
+.l-body .content > h2 {
   font-size: 36px;
   font-family: "Gibson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-.l-body > .container > h1,
-.l-body > .container > h3 {
+.l-body .content > h1,
+.l-body .content > h3 {
   font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
-.l-body > .container > p,
-.l-body > .container > ul {
+.l-body .content > p,
+.l-body .content > ul {
   font-family: "Gibson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
-.l-body > .container > .table-responsive table {
+.l-body .content > .table-responsive table {
   font-family: "Gibson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
-.l-body > .container > .table-responsive table th {
+.l-body .content > .table-responsive table th {
   font-weight: 300;
 }
-.l-body > .container > ul strong {
+.l-body .content > ul strong {
   font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
@@ -7176,7 +7239,11 @@ h4,
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-.highlight pre code {
+pre {
+  border: 1px solid #e2e2e2;
+  background: #fbfbfb;
+}
+pre code {
   font-size: 14px;
 }
 .highlight pre code * {
