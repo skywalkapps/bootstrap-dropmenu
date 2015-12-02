@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-dropmenu",
-  "description": "Extension for Bootstrap 3 dropdown component",
+  "description": "Group of extensions for Bootstrap dropdown component",
   "version": "0.9.0",
   "author": "Martin Staněk",
   "repository": {
