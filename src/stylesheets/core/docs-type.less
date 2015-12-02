@@ -1,3 +1,11 @@
+//
+// DOCS: Type
+// Typography
+
+/* github style pygments theme for jekyll */
+/* from https://github.com/aahan/pygments-github-style */
+// --------------------------------------------------
+
 @font-face {
   font-family: 'Gibson-Light';
   src: url('../assets/fonts/gibson/26F6B3_0_0.eot');
@@ -47,36 +55,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// .sw-text  {
-//   font-size: 18px;
-//   font-weight: 400;
-//   font-family: "Gibson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-// }
-
-
 .lead {
   .f-custom;
 }
 
 b, strong {
   .f-custom-medium;
-}
-
-// h1 {
-//   .f-custom;
-// }
-
-h2 {
-  font-size: 24px;
-//   font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   font-weight: 500;
-}
-
-h3 {
-  // margin-top: @line-height-computed * -2;
-  // padding-top: @line-height-computed * 3;
-//   font-family: "Gibson-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   font-weight: 500;
 }
 
 h1,
@@ -103,6 +87,7 @@ h4,
   line-height: 1.5;
 }
 
+// Navigation
 .l-sidebar-body > .navbar {
   .f-custom;
   
@@ -115,11 +100,13 @@ h4,
   }
 }
 
+// Header
 .sw-header h1,
 .sw-header p {
   .f-custom;
 }
 
+// Body
 .l-body .content > h2 {
     font-size: 36px;
     .f-custom;
@@ -153,14 +140,6 @@ h4,
   font-size: 16px;
   .f-custom;
 }
-
-.align-center {
-  text-align: center;
-}
-
-.fade {
-  .opacity(.5);
-} 
 
 pre {
   border: 1px solid darken(@gray-lighter, 5%);

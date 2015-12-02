@@ -1,5 +1,9 @@
+//
+// DOCS: Layout
+// Layout fo documentation web
 
-@sidebar-width: 260px;
+// @author: Martin Staněk (https://github.com/skywalkapps)
+// --------------------------------------------------
 
 // BODY
 // -------------------------
@@ -9,24 +13,22 @@ body {
 
 .l-body {
   position: absolute;
-  left: @sidebar-width;
+  left: @sw-sidebar-width;
   top: 0;
   bottom: 0;
   right: 0;
   overflow: auto;
-  // height: 100%;
-  .opacity(1);
-  .transition(~'opacity .3s ease-in-out');
 
-  &.out {
-    .opacity(0);
+  .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
 // Sidebar
 .l-sidebar {
   position: absolute;
-  width: @sidebar-width;
+  width: @sw-sidebar-width;
   top: 0;
   left: 0;
   bottom: 0;
@@ -44,27 +46,6 @@ body {
   }
 
   &.out {
-    .translate(-@sidebar-width, 0);
-  }
-}
-
-.l-sidebar-header {
-  
-}
-
-.sidebar-actions {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: @sidebar-width;
-  height: 40px;
-  padding: 6px 25px;
-  background: fade(#fff, 95%);
-
-  .translate(0, 0);
-  .transition(~'transform .3s ease-in-out');
-
-  &.out {
-    .translate(-@sidebar-width, 0);
+    .translate(-@sw-sidebar-width, 0);
   }
 }

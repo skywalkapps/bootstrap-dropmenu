@@ -2,7 +2,7 @@
 layout: default
 title: Dropmenu for Bootstrap
 name: Dropmenu
-description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown component, your fellow companion when creating a web application. These plugins add more structure and capabilities to the dropdown.
+description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown component, your fellow companion when creating a web application. These extensions add more structure and usability features.
 
 ---
 
@@ -169,10 +169,10 @@ Not only height, but also width of the menu can be limited. Set `@dropmenu-max-w
       <ul class="dropdown-menu">
         <li class="dropdown-header">Recently added news (47)</li>
         <li><a href="#">Li-fi 100 times faster than wi-fi'</a></li>
+        <li><a href="#">Shrinking to Zero: The Raspberry Pi gets smaller</a></li>
         <li><a href="#">Pirate makes film to avoid being sued</a></li>
         <li><a href="#">The truth about Facebook quizzes</a></li>
         <li><a href="#">Cyber-thieves 'target Black Friday'</a></li>
-        <li><a href="#">Shrinking to Zero: The Raspberry Pi gets smaller</a></li>
       </ul>
 
     </div><!-- /dropdown-container -->

@@ -93,24 +93,6 @@
     display: block;
   }
 }
-@media (min-width: 768px) {
-  .dropdown-table {
-    display: table;
-  }
-  .dropdown-table > .dropdown-menu {
-    display: table-cell;
-  }
-}
-.dropdown-table > .dropdown-menu {
-  position: static;
-  margin: 0;
-  border: 0;
-  background: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  max-height: 330px;
-  overflow-y: auto;
-}
 .dropdown-position-topright {
   top: auto;
   right: 0;
@@ -190,41 +172,6 @@ small.dropmenu-item-content {
 }
 .dropdown-inverse .dropdown-header {
   color: #777777;
-}
-.dropdown-submenu .dropdown-menu {
-  position: static;
-  display: block;
-  margin: 0;
-  list-style: none;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 0;
-  width: 100%;
-}
-.dropdown-submenu > .dropdown-menu > li > a {
-  padding-left: 30px;
-}
-.dropdown-menu--selectable > li > a:before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin: -4px 4px 0 0;
-  position: relative;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  font-size: 9.6px;
-  color: #333333;
-  width: 12px;
-}
-.dropdown-menu--selectable > .selected > a:before {
-  content: "\e013";
 }
 .table > thead > tr > th.col-actions {
   padding-top: 0;
