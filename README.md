@@ -1,4 +1,4 @@
-# [Dropmenu plugin for Twitter Bootstrap 3](http://skywalkapps.github.io/bootstrap-dropmenu)
+# [Dropmenu plugin for Bootstrap 3](http://skywalkapps.github.io/bootstrap-dropmenu)
 ![Bower version](https://img.shields.io/bower/v/bootstrap.svg?style=flat)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 
@@ -6,11 +6,11 @@ To get started, check out <http://skywalkapps.github.io/bootstrap-dropmenu>!
 
 ## Quick start
 
-Dropmenu plugin is built for Twitter Bootstrap 3. You have following options of installation:
+Dropmenu plugin is built for Bootstrap 3. You have following options of installation:
 
-- [Download the latest release](https://github.com/skywalkapps/bootstrap-dropmenu/archive/v0.1.0.zip).
+- [Download the latest release](https://github.com/skywalkapps/bootstrap-dropmenu/archive/v0.9.0.zip).
 - Clone the repo: `git clone https://github.com/skywalkapps/bootstrap-dropmenu.git`.
-- Install with [Bower](http://bower.io): `bower install bootstrap-dropmenu`.
+<!-- - Install with [Bower](http://bower.io): `bower install bootstrap-dropmenu`. -->
 
 ### How to use
 

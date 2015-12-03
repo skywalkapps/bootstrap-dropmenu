@@ -7,6 +7,6 @@
 // require('../../vendor/zeroclipboard/dist/ZeroClipboard.min');
 
 // Main scripts
-require('main');
+// require('main');
 
 

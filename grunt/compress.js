@@ -11,5 +11,14 @@ module.exports = {
     files: [
       {expand: true, src: ['dist/javascripts/<%= package.name %>.min.js'], dest: '', ext: '.gz.js'}
     ]
+  },
+
+  release: {
+    options: {
+      archive: 'releases/<%= package.name %>-<%= package.version %>.zip'
+    },
+    files: [
+      {expand: true, cwd: 'dist/', src: ['**'], dest: ''}
+    ]
   }
 };
