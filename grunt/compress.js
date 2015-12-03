@@ -15,7 +15,7 @@ module.exports = {
 
   release: {
     options: {
-      archive: 'releases/<%= package.name %>-<%= package.version %>.zip'
+      archive: 'releases/<%= package.name %>-<%= package.version %>-dist.zip'
     },
     files: [
       {expand: true, cwd: 'dist/', src: ['**'], dest: ''}
