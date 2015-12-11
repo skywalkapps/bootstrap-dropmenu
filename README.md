@@ -10,7 +10,7 @@ Dropmenu plugin is built for Bootstrap 3. You have following options of installa
 
 - [Download the latest release](https://github.com/skywalkapps/bootstrap-dropmenu/archive/v0.9.0.zip).
 - Clone the repo: `git clone https://github.com/skywalkapps/bootstrap-dropmenu.git`.
-<!-- - Install with [Bower](http://bower.io): `bower install bootstrap-dropmenu`. -->
+- Install with [Bower](http://bower.io): `bower install bootstrap-dropmenu`.
 
 ### How to use
 
@@ -28,6 +28,7 @@ bootstrap-dropmenu/
 **Martin Staněk**
 
 - <https://twitter.com/@koucik>
+- <https://github.com/@skywalkapps>
 
 ## Copyright and license
 

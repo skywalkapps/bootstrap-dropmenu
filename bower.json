@@ -6,8 +6,17 @@
     "dropdown",
     "menu",
     "bootstrap",
-    "front-end",
-    "extension"
+    "front-end"
+  ],
+  "main": [
+    "./dist/stylesheets/bootstrap-dropmenu.css"
+  ],
+  "ignore": [
+    "log",
+    "docs",
+    "grunt",
+    ".editorconfig",
+    ".gitignore"
   ],
   "dependencies": {
     "jquery": "~2.0.0",
