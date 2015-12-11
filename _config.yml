@@ -20,7 +20,7 @@ encoding:         UTF-8
 
 # Custom vars
 current_version:  0.9.0
-repo:             https://github.com/skywalkapps/bootstrap-dropmenu.git
+repo:             https://github.com/skywalkapps/bootstrap-dropmenu
 
 vendor:			  ./vendor
 download:
