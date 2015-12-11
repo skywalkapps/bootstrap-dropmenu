@@ -1,3 +1,8 @@
+/*!
+ * bootstrap-dropmenu v0.9.0 (https://skywalkapps.github.io/bootstrap-dropmenu)
+ * Copyright 2015 Martin Staněk
+ * Licensed under MIT
+ */
 .dropdown-container {
   position: absolute;
   top: 100%;
@@ -10,8 +15,8 @@
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -61,16 +66,23 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #cccccc;
+  background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px 4px 0 0;
 }
 .dropdown-toolbar > .form-group {
   margin: 5px -10px;
 }
+.dropdown-toolbar .dropdown-toolbar-actions {
+  float: right;
+}
+.dropdown-toolbar .dropdown-toolbar-title {
+  margin: 0;
+  font-size: 14px;
+}
 .dropdown-footer {
   padding: 5px 20px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0 0 4px 4px;
 }
@@ -140,9 +152,7 @@ small.dropmenu-item-content {
   padding-right: 86px;
 }
 .dropdown-inverse .dropdown-menu {
-  background-color: #1a1a1a;
   background-color: rgba(0, 0, 0, 0.8);
-  border: 1px solid #222222;
   border: 1px solid rgba(0, 0, 0, 0.9);
 }
 .dropdown-inverse .dropdown-menu .divider {
@@ -156,13 +166,13 @@ small.dropmenu-item-content {
 }
 .dropdown-inverse .dropdown-menu > li > a:hover,
 .dropdown-inverse .dropdown-menu > li > a:focus {
-  color: #ffffff;
+  color: #fff;
   background-color: #262626;
 }
 .dropdown-inverse .dropdown-menu > .active > a,
 .dropdown-inverse .dropdown-menu > .active > a:hover,
 .dropdown-inverse .dropdown-menu > .active > a:focus {
-  color: #ffffff;
+  color: #fff;
   background-color: #337ab7;
 }
 .dropdown-inverse .dropdown-menu > .disabled > a,

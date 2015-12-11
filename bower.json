@@ -6,12 +6,12 @@
     "dropdown",
     "menu",
     "bootstrap",
-    "front-end"
+    "front-end",
+    "extension"
   ],
   "dependencies": {
     "jquery": "~2.0.0",
-    "bootstrap": "~3.3.0",
-    "zeroclipboard": "~2.2.0"
+    "bootstrap": "~3.3.0"
   },
   "devDependencies": {}
 }

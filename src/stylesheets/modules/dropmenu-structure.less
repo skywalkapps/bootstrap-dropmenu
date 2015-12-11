@@ -120,13 +120,23 @@
   padding-right: @dropdown-padding-horizontal; 
   padding-bottom: @dropdown-padding-vertical; 
   
-  border-bottom: 1px solid @dropdown-fallback-border; // IE8 fallback
+  background-color: @dropdown-toolbar-bg;
   border-bottom: 1px solid @dropdown-border;
   border-radius: @border-radius-base @border-radius-base 0 0;
   
   > .form-group {
     margin: @dropdown-padding-vertical -10px;
   }
+
+  .dropdown-toolbar-actions {
+    float: right;
+  }
+  
+  .dropdown-toolbar-title {
+    margin: 0; // reset heading margin
+    font-size: @font-size-base;
+  }
+
 }
 
 // Dropdown footer

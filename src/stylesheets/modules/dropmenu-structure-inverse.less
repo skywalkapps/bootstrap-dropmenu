@@ -8,14 +8,13 @@
 
 // Dropdown using container
 .dropdown-inverse .dropdown-container {
-  background-color: @dropdown-inverse-fallback-bg;
   background-color: @dropdown-inverse-bg;
-  border: 1px solid @dropdown-inverse-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-inverse-border;
   color: @dropdown-inverse-text-color;
   
   > .dropdown-toolbar,
   > .dropdown-footer {
+  	background-color: transparent;
     border-color: @dropdown-inverse-divider-bg;
   }
 
