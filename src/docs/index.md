@@ -8,7 +8,7 @@ description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown 
 
 ### Dropmenu Structure
 
-Basic Bootstrap dropdown allow you tu use only one `.dropdown-menu` class applied to an unordered list. Dropmenu adds `.dropdown-container`, which serves as a wrapper for more elements. You can use toolbar (`.dropdown-toolbar`),footer (`.dropdown-footer`) and even more `ul.dropdown-menu` elements. Basically, all you've ever needed. 
+Basic Bootstrap dropdown allows you tu use only one `.dropdown-menu` class applied to an unordered list. Dropmenu adds `.dropdown-container`, which serves as a wrapper for more elements. You can use toolbar (`.dropdown-toolbar`),footer (`.dropdown-footer`) and even more `ul.dropdown-menu` elements. Basically, all you've ever needed. 
 
 <div class="sw-example" id="dropdown-structure">
   <div class="btn-group dropdown sw-open" style="margin-right:20px">
