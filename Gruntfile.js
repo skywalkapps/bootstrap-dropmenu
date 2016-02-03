@@ -17,14 +17,14 @@ module.exports = function(grunt) {
   // -------------------------
 
   // Default build task
-  grunt.registerTask('default', ['clean', 'copy', 'dist-css', 'dist-js']);
+  grunt.registerTask('default', ['clean', 'copy', 'dist-css']); //'dist-js'
 
   // JS tasks
-  grunt.registerTask('dist-js', ['neuter', 'uglify', 'compress']);
-  grunt.registerTask('dev-js', ['neuter', 'jshint']);
+  // grunt.registerTask('dist-js', ['neuter', 'uglify', 'compress']);
+  // grunt.registerTask('dev-js', ['neuter', 'jshint']);
 
   // CSS tasks
-  grunt.registerTask('dist-css', ['less']);
+  grunt.registerTask('dist-css', ['less', 'copy:css']);
   grunt.registerTask('dev-css', ['less', 'csslint']);
 
   // Server task

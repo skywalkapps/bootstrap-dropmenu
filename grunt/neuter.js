@@ -1,4 +1,4 @@
-// 
+//
 // GRUNT TASK: Neuter
 // A simple ordered concatenation strategy.
 // -----------------
