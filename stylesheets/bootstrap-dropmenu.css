@@ -183,6 +183,16 @@ small.dropmenu-item-content {
 .dropdown-inverse .dropdown-header {
   color: #777777;
 }
+.dropdown-inverse .dropdown-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  color: #cccccc;
+}
+.dropdown-inverse .dropdown-container > .dropdown-toolbar,
+.dropdown-inverse .dropdown-container > .dropdown-footer {
+  background-color: transparent;
+  border-color: #2b2b2b;
+}
 .table > thead > tr > th.col-actions {
   padding-top: 0;
   padding-bottom: 0;
