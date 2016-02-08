@@ -9,7 +9,7 @@
     "front-end"
   ],
   "main": [
-    "./dist/stylesheets/bootstrap-dropmenu.css"
+    "./dist/stylesheets/bootstrap-dropmenu.min.css"
   ],
   "ignore": [
     "log",

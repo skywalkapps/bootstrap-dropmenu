@@ -19,6 +19,7 @@ baseurl:		      ""
 encoding:         UTF-8
 
 # Custom vars
+home:             http://skywalkapps.github.io
 analytics_code:   UA-72436545-1
 current_version:  0.9.0
 repo:             https://github.com/skywalkapps/bootstrap-dropmenu
@@ -29,3 +30,6 @@ download:
   dist:           https://github.com/skywalkapps/bootstrap-dropmenu/releases/download/v0.9.0/bootstrap-dropmenu-0.9.0-dist.zip
 
 blog:             http://skywalkapps.github/articles
+
+# Content
+footer_text:      "Dropmenu is part of Skywalk, set of components and extensions for Bootstrap Framework. Skywalk gives you fine quality components, which will save you a lot of development time."

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dropmenu for Bootstrap
+title: Bootstrap Dropmenu, dropdown menu on steroids
 name: Dropmenu
 description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown component, your fellow companion when creating a web application. These extensions add more structure and usability features.
 
@@ -8,7 +8,7 @@ description: Dropmenu is a set of extensions, which enhances Bootstrap dropdown 
 
 ### Dropmenu Structure
 
-Basic Bootstrap dropdown allows you tu use only one `.dropdown-menu` class applied to an unordered list. Dropmenu adds `.dropdown-container`, which serves as a wrapper for more elements. You can use toolbar (`.dropdown-toolbar`),footer (`.dropdown-footer`) and even more `ul.dropdown-menu` elements. Basically, all you've ever needed. 
+Basic Bootstrap dropdown allows you tu use only one `.dropdown-menu` class applied to an unordered list. Dropmenu adds `.dropdown-container`, which serves as a wrapper for more elements. You can use toolbar (`.dropdown-toolbar`),footer (`.dropdown-footer`) and even more `ul.dropdown-menu` elements. Basically, all you've ever needed.
 
 <div class="sw-example" id="dropdown-structure">
   <div class="btn-group dropdown sw-open" style="margin-right:20px">
@@ -74,7 +74,7 @@ Basic Bootstrap dropdown allows you tu use only one `.dropdown-menu` class appli
 </div><!-- /dropdown -->
 ~~~
 
-### Scrolling 
+### Scrolling
 
 Customize height of the menu by setting `@dropmenu-max-height` variable. If maximum height is set, dropdown menu becomes scrollable. Change the variable to fit your application.
 
@@ -148,7 +148,7 @@ Customize height of the menu by setting `@dropmenu-max-height` variable. If maxi
 
 </div>
 
-### Truncated Items 
+### Truncated Items
 
 Not only height, but also width of the menu can be limited. Set `@dropmenu-max-width` to desired value and overflowing menu items will be truncated. You can also set `@dropmenu-min-width` to get rid of very narrow menus.
 
@@ -182,7 +182,7 @@ Not only height, but also width of the menu can be limited. Set `@dropmenu-max-w
 
 ### Keyboard Shortcuts
 
-Keyboard shortcuts can really speed up your daily work with any web application. Libraries like <a href="https://craig.is/killing/mice">Mousetrap</a> simplify implementation of event handling. Use dropmenu to expose shortcuts in dropdown menus to make them easily remembered.  
+Keyboard shortcuts can really speed up your daily work with any web application. Libraries like <a href="https://craig.is/killing/mice">Mousetrap</a> simplify implementation of event handling. Use dropmenu to expose shortcuts in dropdown menus to make them easily remembered.
 
 <div class="sw-example" id="dropdown-shortcuts">
   <div class="btn-group dropdown sw-open">
@@ -247,7 +247,7 @@ Twitter Bootstrap allows you to change position of the dropdown menu, however,fo
     Top right
     <span class="caret"></span>
   </button>
-  
+
   <div class="dropdown-container dropdown-position-topright">
     <ul class="dropdown-menu">
       <li><a href="#">Item 1</a></li>
@@ -261,7 +261,7 @@ Twitter Bootstrap allows you to change position of the dropdown menu, however,fo
     Top left
     <span class="caret"></span>
   </button>
-  
+
   <div class="dropdown-container dropdown-position-topleft">
     <ul class="dropdown-menu">
       <li><a href="#">Item 1</a></li>
@@ -277,7 +277,7 @@ Twitter Bootstrap allows you to change position of the dropdown menu, however,fo
     Bottom Right
     <span class="caret"></span>
   </button>
-  
+
   <div class="dropdown-container dropdown-position-bottomright">
     <ul class="dropdown-menu">
       <li><a href="#">Item 1</a></li>
@@ -536,7 +536,7 @@ This table gives you a quick overview of positioning utility classes.
         <td><code>.dropdown-position-bottomright</code></td>
         <td>Aligns with the bottom right corner of the trigger button.</td>
       </tr>
-   
+
     </tbody>
   </table>
 </div>
